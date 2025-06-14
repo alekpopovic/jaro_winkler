@@ -27,3 +27,4 @@ end
 
 Documentation can be found at <https://hexdocs.pm/jaro_winkler>.
 
+[![Elixir CI](https://github.com/alekpopovic/jaro_winkler/actions/workflows/elixir.yml/badge.svg)](https://github.com/alekpopovic/jaro_winkler/actions/workflows/elixir.yml)

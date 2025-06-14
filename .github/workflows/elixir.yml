@@ -1,0 +1,22 @@
+name: Elixir CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+permissions:
+  contents: read
+jobs:
+  build:
+    name: Build and test
+    runs-on: ubuntu-latest
+    env:
+      ImageOS: ubuntu24
+    steps:
+    - uses: actions/checkout@v4
+    - uses: erlef/setup-beam@v1
+      with:
+        elixir-version: '1.18.1'
+        otp-version: '27.0'
+    - run: mix deps.get
+    - run: mix test
